@@ -43,6 +43,12 @@ RUN sudo chown -R coder:coder /home/coder/.local
 RUN sudo curl -fsSL https://deb.nodesource.com/setup_15.x | sudo bash -
 RUN sudo apt-get install -y nodejs
 
+#Install pylivetrader
+RUN sudo apt install -y wget curl 
+RUN wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+RUN chmod +x Miniconda3-latest-Linux-x86_64.sh
+RUN apt install -y python3 python3-pip
+
 # Port
 ENV PORT=8080
 
